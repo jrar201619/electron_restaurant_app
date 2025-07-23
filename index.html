@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Restaurante</title>
+    <!-- Carga Tailwind CSS CDN para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define la fuente Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <!-- Enlaza tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-4 min-h-screen flex flex-col">
+
+    <!-- Encabezado de la aplicación -->
+    <header class="bg-white shadow-md rounded-lg p-4 mb-6 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-gray-800">Gestión de Restaurante</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><button id="btnHome" class="nav-button">Inicio</button></li>
+                <li><button id="btnCategories" class="nav-button">Categorías</button></li>
+                <li><button id="btnProducts" class="nav-button">Productos</button></li>
+                <li><button id="btnSales" class="nav-button">Ventas</button></li>
+                <li><button id="btnReports" class="nav-button">Reportes</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la aplicación -->
+    <main id="appContent" class="flex-grow bg-white shadow-md rounded-lg p-6">
+        <!-- El contenido se cargará dinámicamente aquí -->
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Bienvenido al Sistema de Gestión</h2>
+        <p class="text-gray-600">Utiliza el menú de navegación para gestionar categorías, productos, ventas y reportes.</p>
+
+        <!-- Contenedor para mensajes de la aplicación -->
+        <div id="messageBox" class="hidden mt-4 p-3 rounded-lg text-sm font-medium" role="alert"></div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="mt-6 text-center text-gray-500 text-sm">
+        &copy; 2024 Aplicación de Restaurante. Todos los derechos reservados.
+    </footer>
+
+    <!-- Carga tu script JavaScript para la lógica de la interfaz -->
+    <script src="renderer.js"></script>
+</body>
+</html>
